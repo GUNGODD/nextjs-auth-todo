@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import React, { useEffect, useState } from "react";
 import { Hero } from "./Hero";
 import { CrosshairIcon, CrossIcon, HamIcon, Menu, X } from "lucide-react";
+import Link from "next/link";
 
 const Home = () => {
   const [IsOpen, setIsOpen] = useState(false);
@@ -30,7 +31,9 @@ const Home = () => {
             </h2>
           </div>
           <div className="buttons-users  hidden md:flex flex-row gap-x-4">
-            <Button className="button-sign-in  "> Sign In </Button>
+            <Button className="button-sign-in  ">
+              <Link href="/pages/api/signIn">Sign In</Link>
+            </Button>
             <Button className="button-sign-up "> Sign Up </Button>
           </div>
           <div className="flex md:hidden overflow-hidden ">
